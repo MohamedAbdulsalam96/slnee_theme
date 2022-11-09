@@ -1,0 +1,17 @@
+.layout-side-section .overlay-sidebar {
+    margin-top: 0!important;
+    position: fixed;
+    background: var(--fg-color);
+    top: 0;
+    left: 0;
+    transform: translate(-110%);
+    z-index: 9999;
+    box-shadow: var(--shadow-base);
+    height: 100%;
+    width: 40%;
+    display: block!important;
+    transition: transform .2s ease-in-out;
+    padding: var(--padding-md);
+
+}
+
