@@ -9,7 +9,7 @@ $(".normal-module").click(function(){
 	clear_sidebar();
 	if ( ! $("#sidebar").attr("class").includes("opened")){
 	if (window.innerWidth>400){
-	$("body").animate({"width":window.innerWidth-70});}
+	$("body").animate({"width":window.innerWidth-70});}}
 	show_sidebar();
 	var id = $(this).attr('id');
 	
@@ -30,14 +30,14 @@ function open_sidebar(){
 	$("#sidebar").animate({width:260}, function(){ $("#edit-sidebar").show();});
 	$("#opensidebar").hide();
 	$("#closesidebar").show();
-	if (window.innerWidth>900){
+	if (true){
 		$("body").animate({"width":window.innerWidth-260});
 	}
 	
 }
 function close_sidebar(){
 	$("#sidebar").animate({width:70});
-	if (window.innerWidth>900){
+	if (true){
 	$("body").animate({"width":window.innerWidth-70});}
 	$("#closesidebar").hide();
 	$("#opensidebar").show();
