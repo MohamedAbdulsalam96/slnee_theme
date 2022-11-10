@@ -20,7 +20,9 @@ def get_sidebar(module):
 		count+=1
 	color1=workspace.color or workspace.default_color_1  or "#03fcca"
 	color2=workspace.color_2 or workspace.default_color_2 or "#03fc88"
-	module={"items":items,"color1":color1,"color2":color2,"direction":workspace.direction}
+	font=workspace.font or ""
+	font_css=workspace.font_css1 or ""
+	module={"items":items,"color1":color1,"color2":color2,"direction":workspace.direction,"font":font,"font_css":font_css}
 	return (module)
 
 

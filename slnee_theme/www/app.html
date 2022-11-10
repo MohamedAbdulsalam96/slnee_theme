@@ -18,6 +18,7 @@
 		<script src="jquery-3.6.0.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		{{scroll_menu["sidebar_font_css"] or ""}}
 		<title>Slnee</title>
 		<link rel="shortcut icon"
 			href="{{ favicon or "/assets/frappe/images/frappe-favicon.svg" }}" type="image/x-icon">
@@ -29,6 +30,7 @@
 	</head>
 	{% set direction = layout_direction|reverse%}
 	<style>
+		.container{width:100% !important;}
 		.selected_module{background-color:var(--sidebar-select-color) !important;}
 		.layout-main{direction:{{direction}} ;}
 		.layout-main-section-wrapper{direction:{{layout_direction}} ;}
@@ -36,10 +38,16 @@
 		{% if layout_direction=="rtl" %}
 			.layout-side-section .overlay-sidebar-custom {right:0px;transform: translate(110%);border-left: solid 2px #a59898;}
 			.sidebar-item-icon-custom{padding-left:20px;}
+			.sidebar-item-child{padding-right:30px !important;}
 		{% else %}
 			.layout-side-section .overlay-sidebar-custom {left:0px;transform: translate(-110%);border-right: solid 2px #a59898;}
 			.sidebar-item-icon-custom{padding-right:20px;}
+			.sidebar-item-child{padding-left:30px !important;}
+			body{position:absolute;right:0;width:100%;}
 		{% endif %}
+		{% if scroll_menu["sidebar_font"]%}
+			.sidebar-item-font{font-family:{{scroll_menu["sidebar_font"]}} ;}
+		{% endif%}
 	</style>
 	<body>
 		{% include "public/icons/timeless/icons.svg" %}
