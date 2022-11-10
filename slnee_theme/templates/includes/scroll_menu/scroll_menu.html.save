@@ -4,13 +4,11 @@
 .carousel-cell {cursor: pointer;text-align:center;width: {{box_size}}px;height: {{box_size}}px;margin-right: 20px !important;border-radius: 8px;counter-increment: carousel-cell;border:{{scroll_menu["box_border"]}}}
 .carousel{margin-top:10px;width:90%;margin-left:5%;}
 .carousel-cell:hover{    background-color: var(--sidebar-select-color) !important;}
-.icon-size{
-{% if  scroll_menu.only_icons %}
-	height:80% !important;margin-top:10%;
+{% if scroll_menu.only_icons %}
+	.icon-size{height:70%;margin-top:10%;}
 {% else %}
-	height:70% !important;
+	.icon-size{height:70%;margin-top:10%;{}
 {% endif %}
-}
 </style>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
@@ -22,14 +20,14 @@
 
                 <a style="background-color:transparent !important; margin-bottom:0px !important;width:{{box_size}}px !important;height:{{box_size}}px !important;"href="{% if m.public %}{{'/app/'}}{% else %}{{'/app/private/'}}{% endif %}{{m.title|lower|replace(" ","-")}}" title="{{m.title}}"> 
 			{% if m.image %}
-				<img class="icon-size" src="{{m.image}}" style=""  alt=""> 
+				<img src="{{m.image}}" style="width:80%;margin-top:10% !important;"  alt=""> 
 			{% else %}
-			<span class="sidebar-item-icon" item-icon="{{m.icon or 'folder-normal'}}"><svg class="icon  icon-md icon-size" style="width:80% !important;">
+			<span class="sidebar-item-icon icon-size" item-icon="{{m.icon or 'folder-normal'}}"><svg class="icon  icon-md" style="width:80% !important;">
 				<use class="" href="#icon-{{m.icon or 'folder-normal'}}"></use>
 			</svg></span>
 			{% endif %}
 		</a>
-		{% if not scroll_menu.only_icons %}<br><span>{{_(m.title)}}</span> {% endif %}
+		{% if not scroll_menu.only_icons %}<br><span>{{ m.title}}</span> {% endif %}
 
 
         </div>

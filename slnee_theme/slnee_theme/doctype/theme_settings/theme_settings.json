@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-10 09:29:53.670160",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scroll_bar_section",
+  "box_size",
+  "hide_labels",
+  "side_bar_section",
+  "font",
+  "default_color_1",
+  "default_color_2",
+  "direction",
+  "font_css"
+ ],
+ "fields": [
+  {
+   "fieldname": "scroll_bar_section",
+   "fieldtype": "Tab Break",
+   "label": "Scroll Bar"
+  },
+  {
+   "default": "70",
+   "fieldname": "box_size",
+   "fieldtype": "Int",
+   "label": "Box Size"
+  },
+  {
+   "default": "1",
+   "fieldname": "hide_labels",
+   "fieldtype": "Check",
+   "label": "Hide Labels"
+  },
+  {
+   "fieldname": "side_bar_section",
+   "fieldtype": "Tab Break",
+   "label": "Side Bar"
+  },
+  {
+   "default": "#03fcca",
+   "fieldname": "default_color_1",
+   "fieldtype": "Color",
+   "label": "Default Color 1"
+  },
+  {
+   "default": "#03fc88",
+   "fieldname": "default_color_2",
+   "fieldtype": "Color",
+   "label": "Default Color 2"
+  },
+  {
+   "default": "To Right Bottom",
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "To Bottom\nTo Right\nTo Left\nTo Right Bottom\nTo Left Bottom"
+  },
+  {
+   "fieldname": "font",
+   "fieldtype": "Link",
+   "label": "Font",
+   "options": "Font"
+  },
+  {
+   "fetch_from": "font.css",
+   "fieldname": "font_css",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "font css"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-11-10 10:34:20.529541",
+ "modified_by": "Administrator",
+ "module": "Slnee Theme",
+ "name": "Theme Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

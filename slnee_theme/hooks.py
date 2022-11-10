@@ -39,7 +39,7 @@ app_include_js = "/assets/slnee_theme/js/scroll_menu.js"
 
 # Home Pages
 # ----------
-
+home_page = "dashboard-view/Home"
 # application home page (will override Website Settings)
 # home_page = "login"
 

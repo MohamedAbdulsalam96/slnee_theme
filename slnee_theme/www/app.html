@@ -16,6 +16,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<meta name="mobile-web-app-capable" content="yes">
 		<script src="jquery-3.6.0.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 		<title>Slnee</title>
 		<link rel="shortcut icon"
 			href="{{ favicon or "/assets/frappe/images/frappe-favicon.svg" }}" type="image/x-icon">
@@ -31,6 +33,13 @@
 		.layout-main{direction:{{direction}} ;}
 		.layout-main-section-wrapper{direction:{{layout_direction}} ;}
 		.layout-side-section{direction:{{layout_direction}} ;}
+		{% if layout_direction=="rtl" %}
+			.layout-side-section .overlay-sidebar-custom {right:0px;transform: translate(110%);border-left: solid 2px #a59898;}
+			.sidebar-item-icon-custom{padding-left:20px;}
+		{% else %}
+			.layout-side-section .overlay-sidebar-custom {left:0px;transform: translate(-110%);border-right: solid 2px #a59898;}
+			.sidebar-item-icon-custom{padding-right:20px;}
+		{% endif %}
 	</style>
 	<body>
 		{% include "public/icons/timeless/icons.svg" %}

@@ -1,0 +1,58 @@
+//action when module clicked from scroll bar
+$(".carousel-cell").click(function(){
+	clear_selected()
+	$(this).addClass( "selected_module");
+  });
+//action when module clicked from scroll bar , except home
+$(".normal-module").click(function(){
+	show_sidebar();
+	var id = $(this).attr('id');
+	set_sidebar(id);
+});
+
+//action when home module clicked from scroll bar 
+$(".home-module").click(function(){
+	hide_sidebar();
+	clear_sidebar();
+});
+
+function clear_selected(){
+	$(".carousel-cell").removeClass( "selected_module");
+};
+
+//remove all items from sidebar
+function clear_sidebar(){
+	$('.sidebar-item-custom').slideUp();
+	$('.sidebar-item-custom').remove();
+};
+//set menu to sidebar according to menu selected
+function set_sidebar(module){
+//	if {!module) return [];
+	frappe.call({
+		method:"slnee_theme.desktop.sidebar.get_sidebar",
+		args: {
+			"module":module
+		},
+		async:true,
+		callback(r){
+			if(r.message){
+				console.log(r.message);
+			}
+		}
+	});
+};
+function show_sidebar(){
+	$("#sidebar").addClass("opened-custom");
+};
+function hide_sidebar(){
+	$("#sidebar").removeClass("opened-custom");
+};
+
+
+function insert_element_sidebar(item){
+	var sidebar=$("#sidebar-custom");
+	var new="<div class='sidebar-item-container is-draggable' item-parent='' item-name='HR' item-public='1'>";
+	
+
+	new+="</div>";
+}

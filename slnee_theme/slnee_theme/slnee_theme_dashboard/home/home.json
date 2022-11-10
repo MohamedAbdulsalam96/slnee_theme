@@ -1,0 +1,21 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Outgoing Bills (Sales Invoice)",
+   "width": "Half"
+  }
+ ],
+ "creation": "2022-11-09 12:42:08.242223",
+ "dashboard_name": "Home",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2022-11-09 12:42:08.242223",
+ "modified_by": "Administrator",
+ "module": "Slnee Theme",
+ "name": "Home",
+ "owner": "Administrator"
+}
