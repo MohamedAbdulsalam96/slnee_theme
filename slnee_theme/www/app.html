@@ -30,20 +30,33 @@
 	</head>
 	{% set direction = layout_direction|reverse%}
 	<style>
-		.container{width:100% !important;}
+		.container{width:99% !important;max-width:100%;}
 		.selected_module{background-color:var(--sidebar-select-color) !important;}
 		.layout-main{direction:{{direction}} ;}
 		.layout-main-section-wrapper{direction:{{layout_direction}} ;}
 		.layout-side-section{direction:{{layout_direction}} ;}
+		{% if not scroll_menu["show_logo"]%}
+			.navbar-home{display:none;}
+		{% endif %}
+		{% if scroll_menu["navbar_background"]%}
+			.navbar{background-color:{{scroll_menu["navbar_background"]}} !important;}
+		{% endif %}
 		{% if layout_direction=="rtl" %}
-			.layout-side-section .overlay-sidebar-custom {right:0px;transform: translate(110%);border-left: solid 2px #a59898;}
-			.sidebar-item-icon-custom{padding-left:20px;}
-			.sidebar-item-child{padding-right:30px !important;}
+			.layout-side-section .overlay-sidebar-custom {right:0px;transform: translate(110%);border-left: solid 2px #a59898;padding-left:8px}
+			.sidebar-item-icon-custom{padding-left:20px;padding-right:0px;}
+			.sidebar-item-child{padding-right:25px !important;}
+			body{position:absolute;left:0;width:100%;}
+			#edit-sidebar{float:left;margin-right:10px;}
+			
+			.child-items{right:0px;{border-top-rleft-radius: 8px; border-bottom-left-radius: 8px;}
 		{% else %}
-			.layout-side-section .overlay-sidebar-custom {left:0px;transform: translate(-110%);border-right: solid 2px #a59898;}
-			.sidebar-item-icon-custom{padding-right:20px;}
-			.sidebar-item-child{padding-left:30px !important;}
+			.layout-side-section .overlay-sidebar-custom {left:0px;transform: translate(-110%);border-right: solid 2px #a59898;padding-right:8px;}
+			.sidebar-item-icon-custom{padding-right:20px;padding-left:3px;}
+			.sidebar-item-child{padding-left:25px !important;}
 			body{position:absolute;right:0;width:100%;}
+			#edit-sidebar{float:right;margin-left:10px;}
+			
+			.child-items{border-top-right-radius: 8px; border-bottom-right-radius: 8px;left:0px;}
 		{% endif %}
 		{% if scroll_menu["sidebar_font"]%}
 			.sidebar-item-font{font-family:{{scroll_menu["sidebar_font"]}} ;}

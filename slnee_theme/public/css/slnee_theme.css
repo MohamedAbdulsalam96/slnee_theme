@@ -1,3 +1,7 @@
+.app-logo{
+	max-height:1000px !important;
+}
+
 .layout-side-section .overlay-sidebar-custom {
     margin-top: 0!important;
     position: fixed;
@@ -49,4 +53,30 @@
 	height: 100%;
 	overflow-y: auto;
 
+}
+.child-items{
+	border:solid 2px #a59898;
+	background-color:white !important;
+	height:100%;
+	top:0;
+	width:200px;
+	padding-top:20px;
+}
+
+.sidebar-title{
+	width:100%;
+	padding-top:20px;
+	padding-bottom:50px;
+	text-align:center;
+	font-size:18px;
+}
+.sidebar-child{
+	font-size:15px;
+	padding-top:10px !important;
+}
+.sidebar-item-custom{
+	border-radius:5px;
+}
+.sidebar-item-custom:hover{
+	border:solid 1px gray;
 }

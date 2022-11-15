@@ -47,7 +47,9 @@ def get_context(context):
 	context["app_name"] = (
 		frappe.get_website_settings("app_name") or frappe.get_system_settings("app_name") or _("Frappe")
 	)
-
+	theme=frappe.get_doc("Theme Settings")
+	context["logo"]=theme.logo or ""
+	context["background"]=theme.background or ""
 	signup_form_template = frappe.get_hooks("signup_form_template")
 	if signup_form_template and len(signup_form_template):
 		path = signup_form_template[-1]

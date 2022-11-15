@@ -10,12 +10,23 @@
   "scroll_bar_section",
   "box_size",
   "hide_labels",
+  "show_only_at_home_page",
   "side_bar_section",
   "font",
   "default_color_1",
   "default_color_2",
   "direction",
-  "font_css"
+  "font_css",
+  "column_break_11",
+  "hide_no_childs",
+  "force_default",
+  "navbar_tab",
+  "navbar_background",
+  "column_break_16",
+  "show_app_logo",
+  "login_page_tab",
+  "logo",
+  "background"
  ],
  "fields": [
   {
@@ -25,6 +36,7 @@
   },
   {
    "default": "70",
+   "description": "in pixels.",
    "fieldname": "box_size",
    "fieldtype": "Int",
    "label": "Box Size"
@@ -71,12 +83,69 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "font css"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_only_at_home_page",
+   "fieldtype": "Check",
+   "label": "Show Only at home page"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "hide_no_childs",
+   "fieldtype": "Check",
+   "label": "Hide Items with no childs"
+  },
+  {
+   "fieldname": "login_page_tab",
+   "fieldtype": "Tab Break",
+   "label": "Login Page"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "background",
+   "fieldtype": "Attach Image",
+   "label": "Background"
+  },
+  {
+   "default": "0",
+   "fieldname": "force_default",
+   "fieldtype": "Check",
+   "label": "Force All to default"
+  },
+  {
+   "fieldname": "navbar_tab",
+   "fieldtype": "Tab Break",
+   "label": "NavBar"
+  },
+  {
+   "fieldname": "navbar_background",
+   "fieldtype": "Color",
+   "label": "Background Color"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_app_logo",
+   "fieldtype": "Check",
+   "label": "Show app logo"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-11-10 10:34:20.529541",
+ "modified": "2022-11-14 15:59:00.693047",
  "modified_by": "Administrator",
  "module": "Slnee Theme",
  "name": "Theme Settings",

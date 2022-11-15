@@ -14,7 +14,7 @@
 </style>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-<div class="carousel" style="background-color:var(--bg-color);" data-flickity='{ "freeScroll": true, "wrapAround": true ,"pageDots": false}'>
+<div class="carousel {% if  scroll_menu.only_at_home %}carousel-custom{% endif %}" style="background-color:var(--bg-color);" data-flickity='{ "freeScroll": true, "wrapAround": true ,"pageDots": false}'>
 
     {% for m in scroll_menu["modules"] %}
 
