@@ -10,7 +10,12 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 
-fixtures = ["Custom Field"]
+fixtures = ["Custom Field",
+	{"dt":"Translation"},
+	{"dt":"Font"},
+	{"dt":"Workspace"},
+	{"dt":"Server Script"}
+]
 
 
 # include js, css files in header of desk.html
