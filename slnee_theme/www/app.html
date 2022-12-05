@@ -30,10 +30,15 @@
 	</head>
 	{% set direction = layout_direction|reverse%}
 	<style>
-		.container{width:99% !important;max-width:100%;}
+		body ,.flickity-viewport{background-color:{{scroll_menu["container"]}} !important;}
+		.layout-main-section{background-color:{{scroll_menu["layout_main_section"]}} !important;}
+		.widget{background-color:{{scroll_menu["widget_color"]}} !important;}
+		.container{width:100% !important;max-width:100%;background-color:{{scroll_menu["container"]}}}
 		.selected_module{background-color:var(--sidebar-select-color) !important;}
+		.btn-default{background-color:{{scroll_menu["btn-default-color"]}} !important;}
 		.layout-main{direction:{{direction}} ;}
 		.layout-main-section-wrapper{direction:{{layout_direction}} ;}
+		.page-form{background-color:{{scroll_menu["layout_main_section"]}} !important;border-bottom: 1px solid #1c2937 !important;;}
 		.layout-side-section{direction:{{layout_direction}} ;}
 		{% if not scroll_menu["show_logo"]%}
 			.navbar-home{display:none;}
@@ -47,19 +52,21 @@
 			.sidebar-item-child{padding-right:25px !important;}
 			body{position:absolute;left:0;width:100%;}
 			#edit-sidebar{float:left;margin-right:10px;}
-			
-			.child-items{right:0px;{border-top-rleft-radius: 8px; border-bottom-left-radius: 8px;}
+			.image-custom{margin-left:20px;}			
+			.child-items{right:0px;border-top-left-radius: 8px; border-bottom-left-radius: 8px;}
+			.carousel{margin-right:15%;background-color:{{scroll_menu["container"]}};}
 		{% else %}
 			.layout-side-section .overlay-sidebar-custom {left:0px;transform: translate(-110%);border-right: solid 2px #a59898;padding-right:8px;}
 			.sidebar-item-icon-custom{padding-right:20px;padding-left:3px;}
 			.sidebar-item-child{padding-left:25px !important;}
 			body{position:absolute;right:0;width:100%;}
 			#edit-sidebar{float:right;margin-left:10px;}
-			
+			.image-custom{margin-right:20px;}
+			.carousel{margin-left:15%;background-color:{{scroll_menu["container"]}};}
 			.child-items{border-top-right-radius: 8px; border-bottom-right-radius: 8px;left:0px;}
 		{% endif %}
 		{% if scroll_menu["sidebar_font"]%}
-			.sidebar-item-font{font-family:{{scroll_menu["sidebar_font"]}} ;}
+			.sidebar-item-font,body{font-family:{{scroll_menu["sidebar_font"]}} ;}
 		{% endif%}
 	</style>
 	<body>

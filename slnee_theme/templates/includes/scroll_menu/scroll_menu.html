@@ -2,7 +2,9 @@
 {% set box_size= scroll_menu["box_size"] %}
 <style>
 .carousel-cell {cursor: pointer;text-align:center;width: {{box_size}}px;height: {{box_size}}px;margin-right: 20px !important;border-radius: 8px;counter-increment: carousel-cell;border:{{scroll_menu["box_border"]}}}
-.carousel{margin-top:10px;width:100%;margin-left:0%;}
+.carousel{margin-top:10px !important;width:100%;max-width:1150px;margin:0 auto;}
+.fflickity-prev-next-button.previous{left:-50px !important}
+.flickity-prev-next-button.next{right:-50px !important;}
 .carousel-cell:hover{    background-color: var(--sidebar-select-color) !important;}
 .icon-size{
 {% if  scroll_menu.only_icons %}
@@ -20,7 +22,7 @@
 
         <div id="{{m.title}}" class=" {% if m.title=='Home'%} home-module {% else %} normal-module {% endif %}carousel-cell nameSystem " style="background-colorr:var(--fg-color);">
 
-                <a style="background-color:transparent !important; margin-bottom:0px !important;width:{{box_size}}px !important;height:{{box_size}}px !important;"href="{% if m.public %}{{'/app/'}}{% else %}{{'/app/private/'}}{% endif %}{{m.title|lower|replace(" ","-")}}" title="{{m.title}}"> 
+                <a style="background-color:transparent !important; margin-bottom:0px !important;width:{{box_size}}px !important;height:{{box_size}}px !important;"href="{% if m.public %}{{'/app/'}}{% else %}{{'/app/private/'}}{% endif %}{{m.title|lower|replace(" ","-")}}" title="{{_(m.title)}}"> 
 			{% if m.image %}
 				<img class="icon-size" src="{{m.image}}" style=""  alt=""> 
 			{% else %}

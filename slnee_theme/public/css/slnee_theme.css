@@ -1,3 +1,43 @@
+.flickity-viewport{
+	margin-top:10px;
+}
+.chart-container .axis line{
+	stroke:#bcbcbc !important;
+}
+
+.page-title .title-area .title-text{
+	font-size:30px;
+}
+
+.page-head{margin-bottom: 0px !important;}
+.navbar .container{border-bottom:solid 2px #99b2a8;}
+
+.layout-main-section-wrapper{
+	overflow-y:unset !important;
+}
+
+.llayout-main-section {
+	background-color: #d4e2e2 !important;
+}
+.widget.shortcut-widget-box .indicator-pill{
+height:30px;
+font-size:20px;
+}
+
+.widget .widget-head .widget-label .widget-title{
+	font-size:17px !important;
+}
+.layout-side-section {
+	display:none;
+}
+#top-sidebar{
+	display:block !important;
+}
+
+.sidebar-toggle-btn{
+	display:none !important;;
+}
+
 .app-logo{
 	max-height:1000px !important;
 }

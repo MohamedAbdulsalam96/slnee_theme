@@ -15,4 +15,8 @@ def get_scroll_menu():
 	scroll_menu["only_at_home"]=theme.show_only_at_home_page
 	scroll_menu["navbar_background"]=theme.navbar_background
 	scroll_menu["show_logo"]=theme.show_app_logo
+	scroll_menu["layout_main_section"]=theme.main_section_color
+	scroll_menu["widget_color"]=theme.widget_color
+	scroll_menu["container"]=theme.container
+	scroll_menu["btn-default-color"]=theme.normal_buttons
 	return scroll_menu

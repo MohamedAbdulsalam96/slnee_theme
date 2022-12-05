@@ -7,6 +7,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "general_tab",
+  "container",
+  "main_section_color",
+  "widget_color",
+  "column_break_5",
+  "normal_buttons",
   "scroll_bar_section",
   "box_size",
   "hide_labels",
@@ -140,12 +146,41 @@
   {
    "fieldname": "column_break_16",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "general_tab",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "main_section_color",
+   "fieldtype": "Color",
+   "label": "Main section color"
+  },
+  {
+   "fieldname": "widget_color",
+   "fieldtype": "Color",
+   "label": "Widget Color"
+  },
+  {
+   "fieldname": "container",
+   "fieldtype": "Color",
+   "label": "container"
+  },
+  {
+   "fieldname": "normal_buttons",
+   "fieldtype": "Color",
+   "label": "Normal Buttons"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-11-14 15:59:00.693047",
+ "modified": "2022-11-16 13:24:33.329978",
  "modified_by": "Administrator",
  "module": "Slnee Theme",
  "name": "Theme Settings",

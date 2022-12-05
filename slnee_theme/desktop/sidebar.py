@@ -4,7 +4,7 @@ from frappe import _
 
 @frappe.whitelist()
 def get_language():
-	return frappe.get_doc("User",frappe.session.user).language
+	return ( frappe.get_doc("User",frappe.session.user).language or "en" )
 
 
 @frappe.whitelist()
