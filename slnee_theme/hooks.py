@@ -16,12 +16,14 @@ fixtures = ["Custom Field",
 	{"dt":"Workspace"},
 	{"dt":"Server Script"}
 ]
-
+override_doctype_class = {
+	"Employee Checkin":"slnee_theme.overrides.employee_checkin.CustomEmployeeCheckin"
+}
 
 # include js, css files in header of desk.html
 app_include_css = "/assets/slnee_theme/css/slnee_theme.css"
 app_include_js = ["/assets/slnee_theme/js/scroll_menu.js","/assets/js/theme.min.js"]
-home_page="app/dashboard-view/Home"
+home_page="login"
 # include js, css files in header of web template
 # web_include_css = "/assets/slnee_theme/css/slnee_theme.css"
 # web_include_js = "/assets/slnee_theme/js/slnee_theme.js"
