@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html data-theme-mode="{{ desk_theme.lower() }}" data-theme="{{ desk_theme.lower() }}" dir={{ layout_direction }} lang="{{ lang }}">
 	<head>
+{% if frappe.session.user=="Guest" %}
+<script>
+console.log("guest")
+window.location.href="/login";
+</script>
+{% endif %}
 		<!-- Chrome, Firefox OS and Opera -->
 		<meta name="theme-color" content="#0089FF">
 		<!-- Windows Phone -->

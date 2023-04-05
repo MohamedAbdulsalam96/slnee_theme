@@ -27,8 +27,11 @@ font-size:20px;
 .widget .widget-head .widget-label .widget-title{
 	font-size:17px !important;
 }
-.layout-side-section {
-	display:none;
+
+@media (min-width: 992px) {
+ [data-page-route=Workspaces] .layout-main .layout-side-section {
+    display:none;
+  }
 }
 #top-sidebar{
 	display:block !important;
@@ -86,7 +89,7 @@ font-size:20px;
 	background-color: "#0000ff";
 }
 
-.sidebar-menu{
+.sidebar-menuu{
 	display:none;
 }
 .layout-side-section-custom{

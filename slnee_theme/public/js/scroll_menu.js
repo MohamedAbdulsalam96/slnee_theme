@@ -32,7 +32,9 @@ $(".carousel-cell").click(function(){
 //action when module clicked from scroll bar , except home
 $(".normal-module").click(function(){
 	clear_sidebar();
+	console.log("module")
 	 close_all_childs();
+	$(".layout-side-section").hide();
 	if ( ! $("#sidebar").attr("class").includes("opened")){
 	if (window.innerWidth>400){
 	$("body").animate({"width":window.innerWidth-70});}}
@@ -53,9 +55,11 @@ function gohome(){
 	hide_sidebar();
 	$("body").animate({"width":"100%"});
 		}
+	console.log("home")
 	$("#edit-sidebar").hide();
 	$("#opensidebar").show();
 	$("#closesidebar").hide();
+	$(".layout-side-section").hide();
 	$(".carousel-custom").slideDown();
 	clear_sidebar();
 }
